@@ -1,0 +1,431 @@
+*{
+    font-family: "XperiencePasta";
+    margin: 0;
+}
+
+@font-face {
+    font-family: "XperiencePasta";
+    src: url(./XperiencePasta.ttf);
+}
+
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr;
+    align-items: center;
+}
+
+.imagotipo{
+    background: url("img/imagotipo2.png");
+    width: 249px;
+    height: 79px;
+    margin-left: 8%;
+}
+
+#nav { display: grid;
+grid-template-columns: repeat(3,0.25fr);
+}
+.nave { display: grid;
+        margin-left: 20%;
+    }
+
+.hero {
+    display: grid;
+    grid-template-columns: 0.25fr 0.6fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 1fr 1fr 1fr 0.5fr 0.5fr 0.5fr;
+    background: url("img/carbonara-destaque.png");
+    background-size: cover;
+    background-position: center 60%;
+    width: 100%;
+    height: 110vh;
+}
+
+.hero::before{
+    content: "";
+    grid-column: 1/8;
+    grid-row: 1/9;
+}
+
+.hero .eyebrow{
+    grid-column: 2/7;
+    grid-row: 2;
+    color: #FCAB00;
+    font-size: 20px;
+    align-self: end;
+}
+
+.hero h1{
+    grid-column: 2/7;
+    grid-row: 3/5;
+    color: #FFFFFF;
+    -webkit-text-stroke: 1px #020873;
+    font-size: 58px;
+    line-height: 1.1;
+    align-self: end;
+}
+
+.massasa {
+    -webkit-text-stroke: 0.6px #020873;
+}
+
+.hero p{
+    grid-column: 2/6;
+    grid-row: 5;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+.hero a {
+    width: 90%;
+    height: 8vh;
+    background-color: #FCAB00;
+    color: #020873;
+    border: none;
+    border-radius: 152px;
+    cursor: pointer;
+    font-size: 22px;
+    text-decoration: none;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(2px 5px 5px #020873);
+}
+
+.hero .cta1{
+    grid-column: 2;
+    grid-row: 8;
+}
+
+.hero .cta2{
+    grid-column: 3;
+    grid-row: 8;
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    filter: none;
+}
+
+.oferta {
+    display: grid;
+    grid-template-columns: 0.4fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    background-color: #14244B;
+    width: 100%;
+    height: 90vh;
+    gap: 2em 3em;
+}
+
+.oferta h2{
+    font-size: 44px;
+    color: #FFFFFF;
+    margin-top: 5%;
+    grid-column: 2/5;
+}
+
+.prato {
+    display: grid;
+    grid-template-rows: auto auto auto 1fr auto;
+    background-color: #D9D9D9;
+    grid-column: 2;
+    grid-row: 2;
+    border-radius: 53px;
+    padding: 6%;
+    align-content: start;
+}
+
+.prato .rotulo{
+    color: #FCAB00;
+    -webkit-text-stroke: 1px #FCAB00;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.prato h3{
+    font-size: 36px;
+    color: #020873;
+    -webkit-text-stroke: 1px #020873;
+    margin-bottom: 16px;
+}
+
+.prato p{
+    font-size: 16px;
+    color: #020873;
+    margin-bottom: 24px;
+}
+
+.prato .preco{
+    font-size: 26px;
+    color: #020873;
+    -webkit-text-stroke: 1px #020873;
+    margin-bottom: 20px;
+}
+
+.prato a{
+    width: 60%;
+    height: 6vh;
+    background-color: #FCAB00;
+    color: #020873;
+    border: none;
+    border-radius: 152px;
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: none;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(2px 5px 5px #020873);
+}
+
+.imagemoferta {
+    background: url("img/carbonara-destaque.png");
+    width: 100%;
+    height: 100%;
+    border-radius: 53px;
+    background-size: cover;
+    background-position: center;
+    grid-column: 3/5;
+    grid-row: 2;
+}
+
+.prova {
+    display: grid;
+    grid-template-rows: 0.4fr 1fr;
+    background-color: #14244B;
+    width: 100%;
+    height: 70vh;
+    align-items: center;
+    justify-items: center;
+}
+
+.prova h2{
+    font-size: 44px;
+    color: #FCAB00;
+    -webkit-text-stroke: 1px #FCAB00;
+}
+
+.igre {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+    justify-items: center;
+    width: 100%;
+}
+
+.igre h4{
+    font-size: 28px;
+    justify-self: center;
+    margin-top: 5%;
+    margin-bottom: 2.5%;
+}
+
+.imgver{
+    background: url("img/bay1.png");
+    width: 84px;
+    height: 84px;
+}
+
+.imgtra {
+    background: url("img/bay2.png");
+    width: 84px;
+    height: 84px;
+}
+
+.imgqua {
+    background: url("img/bay3.png");
+    width: 84px;
+    height: 84px;
+}
+
+.verge {
+    display: grid;
+    color: #5A7D3B;
+    grid-column: 2;
+    justify-items: center;
+    width: 90%;
+    text-align: center;
+}
+
+.verge p{
+    font-size: 20px;
+}
+
+.tradit {
+    display: grid;
+    color: #FCAB00;
+    grid-column: 3;
+    justify-items: center;
+    width: 90%;
+    text-align: center;
+}
+
+.tradit p{
+    font-size: 20px;
+}
+
+.quapr {
+    display: grid;
+    color: #E6D1A3;
+    grid-column: 4;
+    justify-items: center;
+    width: 80%;
+    text-align: center;
+}
+
+.quapr p{
+    font-size: 20px;
+}
+
+.processo {
+    display: grid;
+    grid-template-columns: 0.25fr 0.6fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
+    background: url("img/processo_massa.png");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 70vh;
+}
+
+.processo::before{
+    content: "";
+    grid-column: 1/8;
+    grid-row: 1/5;
+}
+
+.processo span{
+    grid-column: 2/6;
+    grid-row: 2;
+    color: #FCAB00;
+    font-size: 16px;
+    align-self: end;
+}
+
+.processo h2{
+    grid-column: 2/6;
+    grid-row: 3;
+    color: #FFFFFF;
+    font-size: 36px;
+    align-self: start;
+}
+
+.formulario {
+    display: grid;
+    background-color: #14244B;
+    align-items: center;
+    justify-items: center;
+    height: 55vh;
+    grid-template-rows: 0.5fr 0.5fr 2fr 0.5fr;
+    width: 100%;
+}
+
+.formulario h2 {
+    font-size: 44px;
+    -webkit-text-stroke: 2px #FCAB00;
+    color: #FCAB00;
+}
+
+.formulario .div {
+    text-align: center;
+    grid-row: 2;
+}
+
+.formulario .div p {
+    font-size: 22px;
+    color: #FCAB00;
+}
+
+.formulario .forms {
+    grid-row: 3;
+    display: grid;
+    width: 50%;
+    grid-template-columns: 0.25fr 1fr;
+    align-items: center;
+    gap: 2%;
+}
+
+.formulario .forms p {
+    display: grid;
+    justify-items: end;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+.formulario .cads {
+    display: grid;
+    font-size: 28px;
+    padding: 0 5%;
+    height: 7vh;
+    background-color: #FCAB00;
+    border-radius: 50px;
+    grid-row: 4;
+    justify-self: center;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 5%;
+}
+
+.formulario .cads a {
+    text-decoration: none;
+    color: #020873;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    width: 100%;
+    height: 40vh;
+    font-size: 20px;
+    color: #020873;
+    align-items: center;
+}
+
+footer .sabor{
+    color: #020873;
+    grid-column: 1/3;
+    grid-row: 3;
+    justify-self: center;
+}
+
+footer a{
+    -webkit-text-stroke: 1px #020873;
+    text-decoration: none;
+}
+
+footer .copy{
+    grid-column: 1/7;
+    grid-row: 5;
+    justify-self: center;
+}
+
+.inicio {
+    grid-column: 4;
+    grid-row: 2;
+    justify-self: center;
+
+}
+
+.produtos {
+    grid-column: 5;
+    grid-row: 2;
+    justify-self: center;
+}
+
+.faleconosco {
+    grid-column: 4;
+    grid-row: 3;
+    justify-self: center;
+}
+
+.quemsomos {
+    grid-column: 5;
+    grid-row: 3;
+    justify-self: center;
+}
+
+.imagotipofo{
+    background: url("img/imagotipo2.png");
+    width: 249px;
+    height: 79px;
+    grid-column: 1/3;
+    grid-row: 2;
+    justify-self: center;
+}
