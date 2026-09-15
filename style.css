@@ -3,6 +3,106 @@
     margin: 0;
 }
 
+body {
+    background-color: var(--fundo);
+}
+
+
+:root {
+    --fundo: #FFFFFF;
+    --fundo-secundario: #14244B;
+    --card: #D9D9D9;
+    --texto: #020873;
+    --texto-claro: #FFFFFF;
+    --destaque: #FCAB00;
+    --verde: #5A7D3B;
+    --bege: #E6D1A3;
+    --corbola: var(--bege);
+    --corinput: #18233D;
+    --logotipo: url("img/imagotipo2.png");
+    --icon: url("img/menu-burger.png");
+    --sm: url("img/moon.png");
+}
+
+body.dark-mode {
+    --fundo: #080D1C;
+    --fundo-secundario: #0B1224;
+    --card: #18233D;
+    --texto: #FFFFFF;
+    --texto-claro: #FFFFFF;
+    --destaque: #FCAB00;
+    --verde: #7FA85A;
+    --bege: #E6D1A3;
+    --corbola: var(--card);
+    --corinput: var(--bege);
+    --logotipo: url("img/imagotipo3.png");
+    --icon: url("img/menu-burger2.png");
+    --sm: url("img/sun.png");
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--corinput);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.4s;
+  background-image: var(--sm);
+  background-color: var(--corbola);
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--corinput);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--corinput);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
 @font-face {
     font-family: "XperiencePasta";
     src: url(./XperiencePasta.ttf);
@@ -15,15 +115,23 @@ header{
 }
 
 .imagotipo{
-    background: url("img/imagotipo2.png");
+    background: var(--logotipo);
     width: 249px;
     height: 79px;
     margin-left: 8%;
 }
 
-.nave { display: grid;
-        margin-left: 20%;
-    }
+.icon {
+    background: var(--icon);
+    width: 24px;
+    height: 24px;
+}
+
+.nave 
+{ 
+    display: grid;
+    margin-left: 20%;
+}
 
 .hero {
     display: grid;
@@ -45,7 +153,7 @@ header{
 .hero .eyebrow{
     grid-column: 2/7;
     grid-row: 2;
-    color: #FCAB00;
+    color: var(--destaque);
     font-size: 20px;
     align-self: end;
 }
@@ -53,7 +161,7 @@ header{
 .hero h1{
     grid-column: 2/7;
     grid-row: 3/5;
-    color: #FFFFFF;
+    color: var(--texto-claro);
     -webkit-text-stroke: 1px #020873;
     font-size: 58px;
     line-height: 1.1;
@@ -67,15 +175,15 @@ header{
 .hero p{
     grid-column: 2/6;
     grid-row: 5;
-    color: #FFFFFF;
+    color: var(--texto-claro);
     font-size: 20px;
 }
 
 .hero a {
     width: 90%;
     height: 8vh;
-    background-color: #FCAB00;
-    color: #020873;
+    background-color: var(--destaque);
+    color: var(--texto);
     border: none;
     border-radius: 152px;
     cursor: pointer;
@@ -84,7 +192,7 @@ header{
     display: grid;
     align-items: center;
     justify-content: center;
-    filter: drop-shadow(2px 5px 5px #020873);
+    filter: drop-shadow(2px 5px 5px var(--texto));
 }
 
 .hero .cta1{
@@ -96,8 +204,8 @@ header{
     grid-column: 3;
     grid-row: 8;
     background-color: transparent;
-    color: #FFFFFF;
-    border: 2px solid #FFFFFF;
+    color: var(--texto-claro);
+    border: 2px solid var(--texto-claro);
     filter: none;
 }
 
@@ -105,7 +213,7 @@ header{
     display: grid;
     grid-template-columns: 0.4fr 1fr 1fr 1fr;
     grid-template-rows: 0.5fr 1fr;
-    background-color: #14244B;
+    background-color: var(--fundo-secundario);
     width: 100%;
     height: 90vh;
     gap: 2em 3em;
@@ -113,7 +221,7 @@ header{
 
 .oferta h2{
     font-size: 44px;
-    color: #FFFFFF;
+    color: var(--texto-claro);
     margin-top: 5%;
     grid-column: 2/5;
 }
@@ -121,7 +229,7 @@ header{
 .prato {
     display: grid;
     grid-template-rows: auto auto auto 1fr auto;
-    background-color: #D9D9D9;
+    background-color: var(--card);
     grid-column: 2;
     grid-row: 2;
     border-radius: 53px;
@@ -130,37 +238,37 @@ header{
 }
 
 .prato .rotulo{
-    color: #FCAB00;
-    -webkit-text-stroke: 1px #FCAB00;
+    color: var(--destaque);
+    -webkit-text-stroke: 1px var(--destaque);
     font-size: 16px;
     margin-bottom: 12px;
 }
 
 .prato h3{
     font-size: 36px;
-    color: #020873;
-    -webkit-text-stroke: 1px #020873;
+    color: var(--texto);
+    -webkit-text-stroke: 1px var(--texto);
     margin-bottom: 16px;
 }
 
 .prato p{
     font-size: 16px;
-    color: #020873;
+    color: var(--texto);
     margin-bottom: 24px;
 }
 
 .prato .preco{
     font-size: 26px;
-    color: #020873;
-    -webkit-text-stroke: 1px #020873;
+    color: var(--texto);
+    -webkit-text-stroke: 1px var(--texto);
     margin-bottom: 20px;
 }
 
 .prato a{
     width: 60%;
     height: 6vh;
-    background-color: #FCAB00;
-    color: #020873;
+    background-color: var(--destaque);
+    color: var(--texto);
     border: none;
     border-radius: 152px;
     cursor: pointer;
@@ -169,7 +277,7 @@ header{
     display: grid;
     align-items: center;
     justify-content: center;
-    filter: drop-shadow(2px 5px 5px #020873);
+    filter: drop-shadow(2px 5px 5px var(--texto));
 }
 
 .imagemoferta {
@@ -186,7 +294,7 @@ header{
 .prova {
     display: grid;
     grid-template-rows: 0.4fr 1fr;
-    background-color: #14244B;
+    background-color: var(--fundo-secundario);
     width: 100%;
     height: 70vh;
     align-items: center;
@@ -195,8 +303,8 @@ header{
 
 .prova h2{
     font-size: 44px;
-    color: #FCAB00;
-    -webkit-text-stroke: 1px #FCAB00;
+    color: var(--destaque);
+    -webkit-text-stroke: 1px var(--destaque);
 }
 
 .igre {
@@ -233,7 +341,7 @@ header{
 
 .verge {
     display: grid;
-    color: #5A7D3B;
+    color: var(--verde);
     grid-column: 2;
     justify-items: center;
     width: 90%;
@@ -246,7 +354,7 @@ header{
 
 .tradit {
     display: grid;
-    color: #FCAB00;
+    color: var(--destaque);
     grid-column: 3;
     justify-items: center;
     width: 90%;
@@ -259,7 +367,7 @@ header{
 
 .quapr {
     display: grid;
-    color: #E6D1A3;
+    color: var(--bege);
     grid-column: 4;
     justify-items: center;
     width: 80%;
@@ -290,7 +398,7 @@ header{
 .processo span{
     grid-column: 2/6;
     grid-row: 2;
-    color: #FCAB00;
+    color: var(--destaque);
     font-size: 16px;
     align-self: end;
 }
@@ -298,14 +406,14 @@ header{
 .processo h2{
     grid-column: 2/6;
     grid-row: 3;
-    color: #FFFFFF;
+    color: var(--texto-claro);
     font-size: 36px;
     align-self: start;
 }
 
 .formulario {
     display: grid;
-    background-color: #14244B;
+    background-color: var(--fundo-secundario);
     align-items: center;
     justify-items: center;
     height: 55vh;
@@ -315,8 +423,8 @@ header{
 
 .formulario h2 {
     font-size: 44px;
-    -webkit-text-stroke: 2px #FCAB00;
-    color: #FCAB00;
+    -webkit-text-stroke: 2px var(--destaque);
+    color: var(--destaque);
 }
 
 .formulario .div {
@@ -326,7 +434,7 @@ header{
 
 .formulario .div p {
     font-size: 22px;
-    color: #FCAB00;
+    color: var(--destaque);
 }
 
 .formulario .forms {
@@ -341,7 +449,7 @@ header{
 .formulario .forms p {
     display: grid;
     justify-items: end;
-    color: #FFFFFF;
+    color: var(--texto-claro);
     font-size: 18px;
 }
 
@@ -350,7 +458,7 @@ header{
     font-size: 28px;
     padding: 0 5%;
     height: 7vh;
-    background-color: #FCAB00;
+    background-color: var(--destaque);
     border-radius: 50px;
     grid-row: 4;
     justify-self: center;
@@ -361,7 +469,7 @@ header{
 
 .formulario .cads a {
     text-decoration: none;
-    color: #020873;
+    color: var(--texto);
 }
 
 footer {
@@ -372,25 +480,25 @@ footer {
     width: 100%;
     height: 40vh;
     font-size: 20px;
-    color: #020873;
+    color: var(--texto);
     gap: 16px;
     padding: 32px 0;
 }
 
 .imagotipofo{
-    background: url("img/imagotipo2.png");
+    background: var(--logotipo);
     width: 249px;
     height: 79px;
 }
 
 footer .sabor{
-    color: #020873;
+    color: var(--texto);
 }
 
 .faleconosco {
     text-decoration: none;
-    color: #020873;
-    border: 2px solid #020873;
+    color: var(--texto);
+    border: 2px solid var(--texto);
     padding: 0.6%;
     justify-self: center;
 }
