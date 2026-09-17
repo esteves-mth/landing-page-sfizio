@@ -18,3 +18,4 @@ A atividade consistiu em pesquisar o conceito de landing page e depois desenhar 
 ## Como visualizar
  
 Basta abrir o arquivo `index.html` em qualquer navegador ou clicar no seguinte link: [landing-page-sfizio](https://esteves-mth.github.io/landing-page-sfizio/)
+ 
